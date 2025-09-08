@@ -68,7 +68,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 | 김지환 | **AI 요약 (`flaskapi`)**           | Flask API 및 AI 요약 산출물 관리                               |
 | 박준서 | **배포/크롤링/툴팁/추천/중복제거** | 배포 작업, 크롤링, 툴팁, 개인화 추천 로직, 중복제거            |
 | 박창준 | **뉴스/스크랩/신고 서비스**        | 뉴스 서비스, 스크랩 기능, 신고 기능                            |
-| 유지은 | **프론트엔드/뉴스레터/뉴스필터링**            | Next.js 기반 프론트엔드 개발, 뉴스레터 서비스, UI/UX 구현 ,개인화,트렌딩,검색/필터링 뉴스      |
+| 유지은 | **프론트엔드/뉴스레터**            | Next.js 기반 프론트엔드 개발, 뉴스레터 서비스, UI/UX 구현      |
 | 이채희 | **회원/보안/인프라**               | 회원 기능, 보안 및 인프라, Config, Gateway, Discovery, Swagger |
 
 ## 🌐 1-8. MSA 식 구조
@@ -202,16 +202,18 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 ## 🖥️ 4-1. 프론트엔드 기술 스택
 
-| 항목                      | 사용 기술                                                                                                                                                                                                                                                                                                         |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **프론트엔드 언어**       | ![JavaScript](https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white)                                                                               |
-| **프론트엔드 프레임워크** | ![Next.js](https://img.shields.io/badge/NEXT.JS-000000?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=black)                                                                                                       |
-| **스타일링**              | ![Tailwind CSS](https://img.shields.io/badge/TAILWIND_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                                                                           |
-| **UI 컴포넌트**           | ![Shadcn/ui](https://img.shields.io/badge/SHADCN/UI-000000?style=for-the-badge&logo=shadcn&logoColor=white) ![Radix UI](https://img.shields.io/badge/RADIX_UI-161618?style=for-the-badge&logo=radix-ui&logoColor=white)                                                                                           |
-| **상태 관리**             | ![React Context](https://img.shields.io/badge/REACT_CONTEXT-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![Zustand](https://img.shields.io/badge/ZUSTAND-FF6B6B?style=for-the-badge&logo=zustand&logoColor=white)                                                                                       |
-| **인증/소셜 로그인**      | ![Google OAuth](https://img.shields.io/badge/GOOGLE_OAUTH-4285F4?style=for-the-badge&logo=google&logoColor=white) ![Kakao Login](https://img.shields.io/badge/KAKAO_LOGIN-FFCD00?style=for-the-badge&logo=kakao&logoColor=black)                                                                                  |
-| **공유 기능**             | ![Kakao Share](https://img.shields.io/badge/KAKAO_SHARE-FFCD00?style=for-the-badge&logo=kakao&logoColor=black)                                                                                                                                                                                                    |
-| **개발 도구**             | ![ESLint](https://img.shields.io/badge/ESLINT-4B32C3?style=for-the-badge&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/PRETTIER-F7B93E?style=for-the-badge&logo=prettier&logoColor=black) ![Vite](https://img.shields.io/badge/VITE-646CFF?style=for-the-badge&logo=vite&logoColor=white) |
+| 항목                      | 사용 기술                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **프론트엔드 언어**       | ![JavaScript](https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white)                                                                                                        |
+| **프론트엔드 프레임워크** | ![Next.js](https://img.shields.io/badge/NEXT.JS_15-000000?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/REACT_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)                                                                                                                          |
+| **스타일링**              | ![Tailwind CSS](https://img.shields.io/badge/TAILWIND_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                                                                                                                    |
+| **UI 컴포넌트**           | ![Shadcn/ui](https://img.shields.io/badge/SHADCN/UI-000000?style=for-the-badge&logo=shadcn&logoColor=white) ![Radix UI](https://img.shields.io/badge/RADIX_UI-161618?style=for-the-badge&logo=radix-ui&logoColor=white) ![Lucide React](https://img.shields.io/badge/LUCIDE_REACT-FF6B6B?style=for-the-badge&logo=lucide&logoColor=white)  |
+| **상태 관리**             | ![React Context](https://img.shields.io/badge/REACT_CONTEXT-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![SWR](https://img.shields.io/badge/SWR-000000?style=for-the-badge&logo=swr&logoColor=white) ![TanStack Query](https://img.shields.io/badge/TANSTACK_QUERY-FF4154?style=for-the-badge&logo=react-query&logoColor=white) |
+| **인증/소셜 로그인**      | ![Google OAuth](https://img.shields.io/badge/GOOGLE_OAUTH-4285F4?style=for-the-badge&logo=google&logoColor=white) ![Kakao Login](https://img.shields.io/badge/KAKAO_LOGIN-FFCD00?style=for-the-badge&logo=kakao&logoColor=black)                                                                                                           |
+| **공유 기능**             | ![Kakao Share](https://img.shields.io/badge/KAKAO_SHARE-FFCD00?style=for-the-badge&logo=kakao&logoColor=black)                                                                                                                                                                                                                             |
+| **폼 관리**               | ![React Hook Form](https://img.shields.io/badge/REACT_HOOK_FORM-EC5990?style=for-the-badge&logo=react-hook-form&logoColor=white) ![Zod](https://img.shields.io/badge/ZOD-3E67B1?style=for-the-badge&logo=zod&logoColor=white)                                                                                                              |
+| **테마 관리**             | ![Next Themes](https://img.shields.io/badge/NEXT_THEMES-000000?style=for-the-badge&logo=next.js&logoColor=white)                                                                                                                                                                                                                           |
+| **개발 도구**             | ![ESLint](https://img.shields.io/badge/ESLINT-4B32C3?style=for-the-badge&logo=eslint&logoColor=white) ![TypeScript](https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![PostCSS](https://img.shields.io/badge/POSTCSS-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)           |
 
 ## 🔧 4-2. 백엔드 기술 스택
 
@@ -313,12 +315,19 @@ hooks/
 - **ScrapContext**: 스크랩 및 컬렉션 상태 관리
 - **ThemeProvider**: 다크/라이트 모드 테마 관리
 
+### 데이터 페칭 및 상태 관리
+
+- **SWR**: 서버 상태 관리 및 캐싱
+- **React Context**: 전역 상태 관리 (마이페이지, 스크랩, 테마)
+
 ### 커스텀 훅 패턴
 
 - **useInterests**: 사용자 관심사 관리
 - **useKakaoShare**: 카카오 공유 기능
 - **useNewsletter**: 뉴스레터 구독 관리
 - **useSummary**: AI 요약 기능
+- **useLoading**: 로딩 상태 관리
+- **usePerformance**: 성능 모니터링
 
 ## 🌐 5-4. API 통신 구조
 
@@ -338,6 +347,28 @@ app/api/
 - **newsService.js**: 뉴스 관련 API 호출
 - **newsletterService.js**: 뉴스레터 관련 API 호출
 - **api-utils.js**: 공통 API 유틸리티 함수
+
+## 🔐 5-5. 미들웨어 및 인증 관리
+
+### Next.js Middleware
+
+- **경로 보호**: `/admin`, `/mypage` 등 인증이 필요한 경로 자동 보호
+- **쿠키 기반 인증**: HttpOnly 쿠키(`access-token`)를 통한 JWT 토큰 관리
+- **자동 리디렉션**: 인증되지 않은 사용자를 `/auth` 페이지로 자동 리디렉션
+- **매처 설정**: API, 정적 파일, favicon 등을 제외한 모든 경로에 적용
+
+### 인증 플로우
+
+1. **로그인 성공** → HttpOnly 쿠키에 JWT 토큰 저장
+2. **보호된 경로 접근** → 미들웨어가 쿠키 존재 여부 확인
+3. **인증 실패** → 자동으로 로그인 페이지로 리디렉션
+4. **인증 성공** → 페이지 접근 허용
+
+### 보안 특징
+
+- **HttpOnly 쿠키**: XSS 공격 방지를 위한 클라이언트 사이드 접근 차단
+- **자동 토큰 갱신**: 백엔드에서 토큰 만료 시 자동 갱신 처리
+- **경로별 권한 관리**: 관리자/사용자별 접근 권한 구분
 
 ---
 
