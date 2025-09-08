@@ -1,0 +1,24 @@
+# Spring Boot 기반 news-service application.yml
+# 서버 포트 설정 및 Spring Cloud Config 서버 설정 포함
+server:
+  port: 8082
+
+spring:
+  application:
+    name: news-service
+  config:
+    import: optional:configserver:http://config-server:8888
+  cloud:
+    bootstrap:
+      enabled: false
+
+# Swagger/OpenAPI 설정
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+    doc-expansion: none
+  packages-to-scan: com.newnormallist.newsservice.news.controller

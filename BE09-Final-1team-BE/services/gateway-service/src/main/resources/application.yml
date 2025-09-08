@@ -1,0 +1,9 @@
+# Configuration for the Gateway Service
+spring:
+  application:
+    name: gateway-service
+  config:
+    import: optional:configserver:http://config-server:8888
+  cloud:
+    bootstrap:
+      enabled: false
