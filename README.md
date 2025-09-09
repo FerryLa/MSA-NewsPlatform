@@ -184,17 +184,17 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 # 📌 3. 세부 기능 설명
 
-- [**`MSA 아키텍쳐 설계`**](https://www.notion.so/coffit23/MSA-215a02b1ffb1818d91fece9cc5192253)
-- [**`웹 크롤러 및 수집 데이터`**](https://docs.google.com/document/d/1mkgBw0V15dasDCe4mlciuKx1zeHG7Hc5/edit)
-- [**`API 명세서`**](https://docs.google.com/document/d/1NxqWpiikF3fV1PJUAb-ISNFM5NzjNZZC/edit#bookmark=id.53cc1fgmbu4v)
-- [**`UI 테스트 케이스`**](https://docs.google.com/spreadsheets/d/1bhWdQKfI2ivGchVSLMq2QwAOm_TKZzRH/edit?gid=1536679567#gid=1536679567)
-- [**`스토리보드`**](https://drive.google.com/drive/folders/1-EGTHDVHXlZCfiaTBf5pRU9s7Mmsmc47)
-- [**`프롬프트 엔지니어링 설계서`**](https://docs.google.com/document/d/1NAWskTLEY75X5-YlqlhPQV7chCsTsKgAP9L9l3eI2Kc/edit?tab=t.0#heading=h.6tv6xuec6c9w)
-- [**`인터페이스 설계서`**](https://docs.google.com/spreadsheets/d/1lqDinzAhGUfUX7_FWZeIxaGgFz9S08Bd/edit?usp=drive_web&ouid=104302817025522008655&rtpof=true)
-- [**`프로젝트 테스트 결과서`**](https://drive.google.com/drive/folders/1bvNQKSayj9y3JubFmjt-lynXfpGELO75)
-- [**`CI/CD 설계서`**](https://drive.google.com/drive/folders/1CBGAeIK7Cx7DLJ2mrUkX546weJZ6BpjD)
-- [**`테스트 결과서`**](https://docs.google.com/spreadsheets/d/12fQDrjJet3mgjH2y7VdR6OhRPn0goZLoTigsx_pi_W4/edit?gid=0#gid=0)
-- [**`테스트 케이스`**](https://docs.google.com/spreadsheets/d/13EvwtY9Xg2dPQmcyKJw0D-wzyc4WJ7Pr/edit?usp=drive_web&ouid=104302817025522008655&rtpof=true)
+- [**`MSA 아키텍쳐 설계`**](https://www.notion.so/coffit23/MSA-269a02b1ffb180f680aac8018b7ff206)
+- [**`웹 크롤러 및 수집 데이터`**](https://www.notion.so/coffit23/269a02b1ffb180fbaf23eeca1205a643)
+- [**`API 명세서`**](https://www.notion.so/coffit23/API-269a02b1ffb18035a7f1e3ab735f730b)
+- [**`UI 테스트 케이스`**](https://www.notion.so/coffit23/UI-269a02b1ffb180469aa5ce91d4885150)
+- [**`스토리보드`**](https://www.notion.so/coffit23/269a02b1ffb1805f97dde08fde4376b0)
+- [**`프롬프트 엔지니어링 설계서`**](https://www.notion.so/coffit23/269a02b1ffb180749572f47582d0d1c7)
+- [**`인터페이스 설계서`**](https://www.notion.so/coffit23/269a02b1ffb180d697f8dc2b4d2d750e)
+- [**`프로젝트 테스트 결과서`**](https://www.notion.so/coffit23/269a02b1ffb180469932f6b3510870bf)
+- [**`CI/CD 설계서`**](https://www.notion.so/coffit23/CI-CD-269a02b1ffb1805c8faec7ceca3ce7d6)
+- [**`테스트 결과서`**](https://www.notion.so/coffit23/269a02b1ffb180ba882fceb6f2022687)
+- [**`테스트 케이스`**](https://www.notion.so/coffit23/269a02b1ffb1804aa2a8cd1bd2176fc8)
 
 ---
 
@@ -391,12 +391,12 @@ app/api/
 ### `박준서`
 
 - **주요 역할** : 배포 작업, 크롤링, 툴팁, 개인화 추천 로직, 중복제거
-- **느낀 점** :
+- **느낀 점** : 
 
 ### `박창준`
 
-- **주요 역할** : 뉴스 서비스, 스크랩 기능, 신고 기능
-- **느낀 점** :
+- **주요 역할** : 뉴스 서비스, 스크랩 기능, 신고 기능, 컬렉션 기능
+- **느낀 점** : 이번 파이널 프로젝트는 단순히 프론트엔드와 백엔드 기능을 구현하는 것을 넘어, 하나의 아이디어가 어떻게 코드와 인프라를 거쳐 사용자에게 전달되는 과정을 온몸으로 부딪히며 배운 소중한 경험이었습니다. 뉴스 서비스와 컬렉션 기능을 개발하며 MSA의 구조와 서비스 간의 협력 방식을 익혔고, 스크 기능, 신고 기능, 컬력센 기능, 뉴스 서비스 기능을 만들며 뉴스의 대한 사용자의 가치와 서비스의 안정성을 고민했습니다. 하지만 저희에게 가장 큰 도전이자 가장 값진 성장을 안겨준 것은 단연 CI/CD 파이프라인 구축과 배포 자동화였습니다. 배포하는 과정은 수많은 시행착오의 연속이었습니다. 특히, 팀원분들이 없었다면 배포하는데 많은 어려움이 있었을 거 같습니다. 많이 어려웠지만, 코드를 푸시했을 때 자동으로 테스트, 빌드, 배포가 이루어지는 것을 처음 목격했을 때 팀원 모두가 느꼈던 성취감은 그 어떤 기능 개발보다도 컸습니다. 그리고 이번 프로젝트는 특정 기술의 습득을 넘어, 시스템 전체를 보는 시야를 갖게 해주었습니다. 앞으로는 AI 발전으로 인해 코드 작성도 중요하지만 설계능력과 얼마나 잘 협업하고 다양한 개발 도구를 활용해 잘 해결해 나갈 수 있는 사람이 개발자에게 중요해질거 같은데 이번 프로젝트는 모든 경험을 해볼 수 있던거 같아서 의미있던 경험이었습니다. 사실 이번 부트캠프를 통해 처음 배우는게 대다수였고 많은 걱정이 있었고 어려움도 많았지만 좋은 강사님, 그리고 좋은 동료분들 덕분에 파이널 프로젝트까지 잘 마무리 할 수 있어서 정말 의미있던 시간을 보낼 수 있어서 감사했던 거 같습니다. 덕분에 단순히 코드를 작성하는 것을 넘어, 아키텍처를 설계하고, 서비스간의 관계를 조율하며, 사용자의 가치를 고민하는 등 다각적인 시야를 가진 개발자로 한층 더 성장할 수 있었고, 앞으로는 단순히 주어진 기능을 구현하는 것에 그치지 않고, 비즈니스 요구사항부터 아키텍처 설계, 안정적인 배포와 운영까지 고려하고 제가 작성한 코드가 어떻게 비즈니스 가치로 이어지고, 어떻게 사용자에게 안정적으로 전달되는지의 전 과정을 이해하고 책임질 수 있는, 신뢰받는 개발자가 되고 싶습니다.
 
 ### `유지은`
 
