@@ -1,9 +1,10 @@
 # 📄 1. 프로젝트 기획서
+<img width="1903" height="668" alt="{595346E7-5DD5-4A83-B6C6-B404B9743768}" src="https://github.com/user-attachments/assets/e9c37123-e1bf-4de4-b057-a84f8d19885a" />
 
 ##  1-1. 프로젝트 개요
-
+- **팀명:** 뉴노멀리스트 / **사이트명:**  NewSpare
 - **프로젝트명:**
-NewSphere 
+MSA 기반 뉴스 수집 및 검색 플랫폼 서비스
 - **진행 기간:**
 2025.07.18 ~ 2025.09.10
 
@@ -13,11 +14,10 @@ NewSphere
 
 | 김지환                                                           | 박준서                                                           | 박창준                                                           | 유지은                                                           | 이채희                                                           |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| ![김지환](https://avatars.githubusercontent.com/u/106491547?v=4) | ![박준서](https://avatars.githubusercontent.com/u/106491548?v=4) | ![박창준](https://avatars.githubusercontent.com/u/106491549?v=4) | ![유지은](https://avatars.githubusercontent.com/u/123456789?v=4) | ![이채희](https://avatars.githubusercontent.com/u/106491551?v=4) |
+| ![김지환](https://github.com/user-attachments/assets/df565f12-74c1-4374-b56a-2e2d34e2fb48) | ![박준서](https://github.com/user-attachments/assets/702b2f38-76c3-4c99-9a8d-cf37704a08da) | ![박창준](https://github.com/user-attachments/assets/7ddf7b0f-6d8b-423f-8c21-03e2a0292715) | ![유지은](https://github.com/user-attachments/assets/05794872-72cb-405e-af55-79a8ec897620) | ![이채희](https://github.com/user-attachments/assets/12bcc0e8-133b-48e1-b6e1-3bd67cc7b577) |
 | [GitHub](https://github.com/FerryLa)                             | [GitHub](https://github.com/Berry-mas)                           | [GitHub](https://github.com/changjunpark13)                      | [GitHub](https://github.com/yde222)                              | [GitHub](https://github.com/apocalcal)                           |
 
 ## 1-3. 프로젝트 설명
-
 본 프로젝트는 MSA 아키텍처 기반의 뉴스 검색 및 수집 플랫폼 프로젝트이다.
 뉴스 서비스의 대표적인 기능인 회원기능, 뉴스 크롤링, 중복제거, 개인화 추천, 뉴스레터 발송 기능, 툴팁, 검색기능, 스크랩/컬렉션, 뉴스요약을 중심으로 구현했으며,
 JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 사용자 경험을 제공한다.
@@ -82,21 +82,21 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 | 이채희 | **회원/보안/인프라**               | 회원 기능, 보안 및 인프라, Config, Gateway, Discovery, Swagger |
 
 ## 1-8. MSA 식 구조
-<img width="750" height="1200" alt="image" src="https://github.com/user-attachments/assets/73812d93-b12b-4bad-96b4-a82c1c3ebdf6" />
+<img width="1000" height="1200" alt="image" src="https://github.com/user-attachments/assets/da8a3c64-343f-44be-bd4b-48e4487a7c89" />
 
 
 | 모듈명                   | 기능 역할                                                          | 담당자 |
 | ------------------------ | ------------------------------------------------------------------ | ------ |
-| **`news-service`**       | 뉴스 CRUD, 스크랩 기능, 신고 기능, 트렌딩 뉴스, 카테고리 관리      | 박창준 |
-| **`user-service`**       | 회원가입/로그인, JWT 인증, 마이페이지, 읽기 이력, 사용자 정보 관리 | 이채희 |
-| **`crawler-service`**    | 네이버 뉴스 크롤링, 파일서버 연동, 크롤링 데이터 관리              | 박준서 |
-| **`newsletter-service`** | 개인화 뉴스레터 생성, 이메일 발송, 구독 관리                       | 유지은 |
-| **`tooltip-service`**    | 뉴스 본문 NLP 분석, 어려운 단어 툴팁 제공, 단어 정의 관리          | 박준서 |
-| **`dedup-service`**      | Python 기반 SBERT 중복제거, FastAPI 서비스                         | 박준서 |
-| **`flaskapi`**           | OpenAI 기반 뉴스 요약, AI 기능 제공                                | 김지환 |
-| **`gateway-service`**    | API Gateway, 라우팅, 인증, 로드밸런싱                              | 이채희 |
-| **`discovery-service`**  | Eureka 서버, 서비스 등록/발견                                      | 이채희 |
-| **`config-service`**     | 공통 환경설정, JWT 토큰 및 마이크로서비스 중앙 설정 관리           | 이채희 |
+| **`news-service`**            | 뉴스 CRUD, 스크랩 기능, 신고 기능, 트렌딩 뉴스, 카테고리 관리          | 박창준 |
+| **`user-service`**            | 회원가입/로그인, JWT 인증, 마이페이지, 읽기 이력, 사용자 정보 관리      | 이채희 |
+| **`crawler-service`**         | 네이버 뉴스 크롤링, 파일서버 연동, 크롤링 데이터 관리                   | 박준서 |
+| **`newsletter-service`**      | 개인화 뉴스레터 생성, 이메일 발송, 구독 관리                            | 유지은 |
+| **`tooltip-service`**         | 뉴스 본문 NLP 분석, 어려운 단어 툴팁 제공, 단어 정의 관리               | 박준서 |
+| **`dedup-service`**           | Python 기반 SBERT 중복제거, FastAPI 서비스                              | 박준서 |
+| **`flaskapi`**                | OpenAI 기반 뉴스 요약, AI 기능 제공                                     | 김지환 |
+| **`gateway-service`**         | API Gateway, 라우팅, 인증, 로드밸런싱                                   | 이채희 |
+| **`discovery-service`**       | Eureka 서버, 서비스 등록/발견                                           | 이채희 |
+| **`config-service`**          | 공통 환경설정, JWT 토큰 및 마이크로서비스 중앙 설정 관리                | 이채희 |
 
 ---
 
@@ -175,6 +175,8 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 | AD-05 | 사용자 관리          | 사용자 목록 조회 및 관리       |
 | AD-06 | 통계 데이터 조회     | 서비스 이용 통계 조회          |
 | AD-07 | 크롤링 관리          | 뉴스 크롤링 상태 및 설정 관리  |
+
+---
 
 # 📜 3. 문서
 
