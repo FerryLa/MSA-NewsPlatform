@@ -1,24 +1,22 @@
-# 💻 1. 프로젝트 기획서
+# 📄 1. 프로젝트 기획서
 
-## 📄 1-1. 프로젝트 개요
+##  1-1. 프로젝트 개요
 
-- **프로젝트명:** NewSphere 📰
+- **프로젝트명:**
+NewSphere 
 - **진행 기간:**
+2025.07.18 ~ 2025.09.10
 
-  - 2025.07.18 ~ 2025.09.10
+- **설명:** 뉴스 수집 및 검색 플랫폼의 주요 서비스(회원기능, 뉴스 크롤링, 툴팁, 개인화 추천, 뉴스레터, 스크랩, 뉴스 요약 등)를 MSA 아키텍처 기반으로 구현하고, 이후 CI/CD 및 클라우드 배포 환경까지 실제 서비스 운영 경험을 목표로 한 뉴스 플랫폼 프로젝트
 
-- **설명:**  
-  뉴스 수집 및 검색 플랫폼의 주요 서비스(회원기능, 뉴스 크롤링, 툴팁, 개인화 추천, 뉴스레터, 스크랩, 뉴스 요약 등)를 MSA 아키텍처 기반으로 구현하고,  
-  이후 CI/CD 및 클라우드 배포 환경까지 실제 서비스 운영 경험을 목표로 한 뉴스 플랫폼 프로젝트
-
-## 👨‍💼 1-2. 팀원 구성
+## 1-2. 팀원 구성
 
 | 김지환                                                           | 박준서                                                           | 박창준                                                           | 유지은                                                           | 이채희                                                           |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
 | ![김지환](https://avatars.githubusercontent.com/u/106491547?v=4) | ![박준서](https://avatars.githubusercontent.com/u/106491548?v=4) | ![박창준](https://avatars.githubusercontent.com/u/106491549?v=4) | ![유지은](https://avatars.githubusercontent.com/u/123456789?v=4) | ![이채희](https://avatars.githubusercontent.com/u/106491551?v=4) |
 | [GitHub](https://github.com/FerryLa)                             | [GitHub](https://github.com/Berry-mas)                           | [GitHub](https://github.com/changjunpark13)                      | [GitHub](https://github.com/yde222)                              | [GitHub](https://github.com/apocalcal)                           |
 
-## 📅 1-3. 프로젝트 설명
+## 1-3. 프로젝트 설명
 
 본 프로젝트는 MSA 아키텍처 기반의 뉴스 검색 및 수집 플랫폼 프로젝트이다.
 뉴스 서비스의 대표적인 기능인 회원기능, 뉴스 크롤링, 중복제거, 개인화 추천, 뉴스레터 발송 기능, 툴팁, 검색기능, 스크랩/컬렉션, 뉴스요약을 중심으로 구현했으며,
@@ -26,7 +24,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 사용자는 개인화된 뉴스 추천, 뉴스레터 수신, 스크랩/컬렉션, 뉴스 요약 등 다양한 기능을 사용할 수 있다.
 개발이 완료된 후에는 Jenkins, AWS 등의 DevOps 도구를 활용하여 자동화된 배포 환경을 구축했다.
 
-## 🔄 1-4. 목표 및 범위
+## 1-4. 목표 및 범위
 
 본 프로젝트의 목표는 뉴스 플랫폼의 주요 서비스 흐름과 핵심 기능을 MSA 구조에서 직접 구현하며,
 실무에서 요구하는 "회원기능, 뉴스 크롤링, 중복제거, 개인화 추천, 뉴스레터 발송 기능, 툴팁, 검색기능, 스크랩/컬렉션, 뉴스요약" 등 개발을 직접 경험하는 데 있다.
@@ -34,7 +32,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 또한 CI/CD, 클라우드(AWS) 환경에서의 자동화된 배포 파이프라인 구축 등
 개발부터 배포까지 전 과정을 경험하고, 실제 서비스와 유사한 환경을 구축하는 것을 목표로 한다.
 
-## 👤 1-5. 타겟 사용자
+## 1-5. 타겟 사용자
 
 - **일반 사용자**
   : 뉴스를 탐색하고 개인화된 추천을 받으며, 스크랩/컬렉션 및 뉴스레터 수신 등 뉴스 서비스를 이용하는 고객
@@ -42,7 +40,19 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 - **관리자**
   : 뉴스 승격, 통계 데이터, 사용자 관리 등 서비스 데이터와 콘텐츠를 관리하는 관리자 계정
 
-## 🔢 1-6. 주요 기능 목록
+## 1-6. 주요 기능 목록
+
+| 메인 홈페이지 | 소셜 로그인 및 마이페이지 |
+|:-------------:|:-------------------------:|
+| ![Image1](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjc4NTcyeXd3ZWwxN3ZxczBqOWhiM3RwanUxMGxjdzUzY3N5cGZ1ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/z0MWtpmcy4dOBjMDcH/giphy.gif) | ![Image](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWpqcHkzdmwzNXF6cXhxZGN5Y2NzZXo5cWdudzhrcWtoM3ZrN3NpeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WJ6ZFum7wMPhSY0RSf/giphy.gif) |
+
+| 검색 및 스크랩 | 뉴스레터 |
+|:-------------:|:-------------------------:|
+|![Image3](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamxqaWpqbnllbHFhcmprbHh2MWs5dzlhZXdmYTFmaXp5eHdhdjI5ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Mi1yG8QWCgQwfuDQm/giphy.gif) |![Image4](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWVocDc2YmhiczR6eHJsenY4eHpyNTA1NnhwNjNnZGZ2NXczenZvNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m6uJMt2qKeJbhRgXQf/giphy.gif) |
+
+| AI요약 및 호버링 | 컬렉션 |
+|:-------------:|:-------------------------:|
+|![Image5](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3dmNmo5Z2p6ZGlicWNvOWY0YXAwbDA1dXZ6c3M3b2FvaWlmbGpoeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/z0MWtpmcy4dOBjMDcH/giphy.gif) | ![Image6](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGp3NnNxZHcxdGJkZjh3YjFrZzZxMXl3ZW1tMXd3MzBlcDB4Ym5wdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/leceLLl9UO0NsSwkGW/giphy.gif)|
 
 - **회원가입 및 로그인**
   : 이메일 기반 회원가입/로그인, JWT 인증 적용
@@ -61,7 +71,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 - **AI 요약**
   : OpenAI 기반 뉴스 요약 기능
 
-## 📋 1-7. 담당 기능
+## 1-7. 담당 기능
 
 | 담당자 | 서비스명 (`영문-service`)          | 주요 역할/설명                                                 |
 | ------ | ---------------------------------- | -------------------------------------------------------------- |
@@ -71,7 +81,67 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 | 유지은 | **프론트엔드/뉴스레터/검색/개인화**            | Next.js 기반 프론트엔드 개발, 뉴스레터 서비스, UI/UX 구현, 개인화 뉴스 추천, 검색기능    |
 | 이채희 | **회원/보안/인프라**               | 회원 기능, 보안 및 인프라, Config, Gateway, Discovery, Swagger |
 
-## 🌐 1-8. MSA 식 구조
+## 1-8. MSA 식 구조
+
+```mermaid
+graph TB
+    subgraph "Frontend"
+        FE[Next.js Frontend<br/>:3000]
+    end
+
+    subgraph "API Gateway"
+        GW[Gateway Service<br/>:8000]
+    end
+
+    subgraph "Core Services"
+        NS[News Service<br/>:8081]
+        US[User Service<br/>:8082]
+        CR[Crawler Service<br/>:8083]
+        NLS[Newsletter Service<br/>:8084]
+        TS[Tooltip Service<br/>:8085]
+        DS[Dedup Service<br/>:8086]
+        FAS[FlaskAPI<br/>:8087]
+    end
+
+    subgraph "Infrastructure"
+        DSV[Discovery Service<br/>:8761]
+        CFG[Config Service<br/>:8888]
+        DB[(MySQL)]
+        RD[(Redis)]
+        MQ[RabbitMQ]
+    end
+
+    FE --> GW
+    GW --> NS
+    GW --> US
+    GW --> CR
+    GW --> NLS
+    GW --> TS
+    GW --> DS
+    GW --> FAS
+
+    NS --> DSV
+    US --> DSV
+    CR --> DSV
+    NLS --> DSV
+    TS --> DSV
+    DS --> DSV
+    FAS --> DSV
+
+    DSV --> CFG
+
+    NS --> DB
+    US --> DB
+    CR --> DB
+    NLS --> DB
+    TS --> DB
+    DS --> DB
+    FAS --> DB
+
+    US --> RD
+    NLS --> MQ
+```
+
 
 | 모듈명                   | 기능 역할                                                          | 담당자 |
 | ------------------------ | ------------------------------------------------------------------ | ------ |
@@ -88,17 +158,17 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 ---
 
-# 📚 2. Newphere 요구사항 정의서
+# 👤 2. 요구사항 정의서
 
-## 📜 2-1. 프로젝트 개요
+## 2-1. 프로젝트 개요
 
 - **목표**: 사용자가 다양한 뉴스 정보를 쉽고 편리하게 조회·구독할 수 있는 개인화 뉴스 플랫폼 서비스 구현
 - **구성**: MSA 기반
 - **주요 기능**: 회원 관리, 뉴스 크롤링/중복제거, 개인화 추천, 뉴스레터, 스크랩/컬렉션, AI 요약 등
 
-## 🔍 2-2. 사용자 영역 요구사항
+## 2-2. 사용자 영역 요구사항
 
-### 🔐 2-3. 회원 관리
+### 2-3. 회원 관리
 
 | TC ID | 기능 명                        | 목적/설명                      |
 | ----- | ------------------------------ | ------------------------------ |
@@ -115,7 +185,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 ---
 
-### 📰 2-4. 뉴스 관리
+### 2-4. 뉴스 관리
 
 | TC ID | 기능 명              | 목적/설명                |
 | ----- | -------------------- | ------------------------ |
@@ -132,7 +202,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 ---
 
-### 📌 2-5. 스크랩 및 컬렉션 관리
+### 2-5. 스크랩 및 컬렉션 관리
 
 | TC ID | 기능 명            | 목적/설명                    |
 | ----- | ------------------ | ---------------------------- |
@@ -145,7 +215,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 ---
 
-### 📧 2-6. 뉴스레터 관리
+### 2-6. 뉴스레터 관리
 
 | TC ID | 기능 명              | 목적/설명                 |
 | ----- | -------------------- | ------------------------- |
@@ -157,7 +227,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 ---
 
-### 🤖 2-7. AI 기능 관리
+### 2-7. AI 기능 관리
 
 | TC ID | 기능 명        | 목적/설명                 |
 | ----- | -------------- | ------------------------- |
@@ -168,7 +238,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 ---
 
-## 🤝 2-8. 관리자 영역 요구사항
+## 2-8. 관리자 영역 요구사항
 
 | TC ID | 기능 명              | 목적/설명                      |
 | ----- | -------------------- | ------------------------------ |
@@ -182,25 +252,35 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 ---
 
-# 📌 3. 세부 기능 설명
+# 📜 3. 문서
 
+### 3-1 프로젝트 문서
 - [**`MSA 아키텍쳐 설계`**](https://www.notion.so/coffit23/MSA-269a02b1ffb180f680aac8018b7ff206)
+
+### 3-2 데이터 구축 설계
 - [**`웹 크롤러 및 수집 데이터`**](https://www.notion.so/coffit23/269a02b1ffb180fbaf23eeca1205a643)
+- [**`프롬프트 엔지니어링 설계서`**](https://www.notion.so/coffit23/269a02b1ffb180749572f47582d0d1c7)
 - [**`API 명세서`**](https://www.notion.so/coffit23/API-269a02b1ffb18035a7f1e3ab735f730b)
+
+### 3-3 UI/UX 문서 (프런트엔드)
 - [**`UI 테스트 케이스`**](https://www.notion.so/coffit23/UI-269a02b1ffb180469aa5ce91d4885150)
 - [**`스토리보드`**](https://www.notion.so/coffit23/269a02b1ffb1805f97dde08fde4376b0)
-- [**`프롬프트 엔지니어링 설계서`**](https://www.notion.so/coffit23/269a02b1ffb180749572f47582d0d1c7)
+
+### 3-4 API 상세 명세서 (백엔드)
 - [**`인터페이스 설계서`**](https://www.notion.so/coffit23/269a02b1ffb180d697f8dc2b4d2d750e)
+- [**`테스트 케이스`**](https://www.notion.so/coffit23/269a02b1ffb1804aa2a8cd1bd2176fc8)
+- [**`테스트 결과서`**](https://www.notion.so/coffit23/269a02b1ffb180ba882fceb6f2022687)
+
+### 3-5 테스트 배포 계획
 - [**`프로젝트 테스트 결과서`**](https://www.notion.so/coffit23/269a02b1ffb180469932f6b3510870bf)
 - [**`CI/CD 설계서`**](https://www.notion.so/coffit23/CI-CD-269a02b1ffb1805c8faec7ceca3ce7d6)
-- [**`테스트 결과서`**](https://www.notion.so/coffit23/269a02b1ffb180ba882fceb6f2022687)
-- [**`테스트 케이스`**](https://www.notion.so/coffit23/269a02b1ffb1804aa2a8cd1bd2176fc8)
+
 
 ---
 
 # 🛠 4. 기술 스택
 
-## 🖥️ 4-1. 프론트엔드 기술 스택
+## 4-1. 프론트엔드 기술 스택
 
 | 항목                      | 사용 기술                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -215,7 +295,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 | **테마 관리**             | ![Next Themes](https://img.shields.io/badge/NEXT_THEMES-000000?style=for-the-badge&logo=next.js&logoColor=white)                                                                                                                                                                                                                           |
 | **개발 도구**             | ![ESLint](https://img.shields.io/badge/ESLINT-4B32C3?style=for-the-badge&logo=eslint&logoColor=white) ![TypeScript](https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![PostCSS](https://img.shields.io/badge/POSTCSS-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)           |
 
-## 🔧 4-2. 백엔드 기술 스택
+## 4-2. 백엔드 기술 스택
 
 | 항목                  | 사용 기술                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -229,8 +309,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 ---
 
 # 🏗️ 5. 프론트엔드 아키텍처 및 구조
-
-## 📁 5-1. 프로젝트 구조
+## 5-1. 프로젝트 구조
 
 ```
 app/
@@ -271,16 +350,16 @@ hooks/
 └── useSummary.jsx        # AI 요약 훅
 ```
 
-## 🎯 5-2. 프론트엔드 주요 기능
+## 5-2. 프론트엔드 주요 기능
 
-### 🔐 인증 및 사용자 관리
+### 인증 및 사용자 관리
 
 - **소셜 로그인**: Google OAuth, Kakao Login 연동
 - **JWT 토큰 관리**: 자동 토큰 갱신 및 만료 처리
 - **사용자 인증**: 보호된 라우트 및 권한 기반 접근 제어
 - **마이페이지**: 사용자 정보 수정, 구독 관리, 스크랩 관리
 
-### 📰 뉴스 관련 기능
+### 뉴스 관련 기능
 
 - **뉴스 목록**: 카테고리별, 트렌딩 뉴스 표시
 - **뉴스 상세**: 상세 정보, 관련 뉴스, AI 요약
@@ -288,26 +367,26 @@ hooks/
 - **뉴스 스크랩**: 개별 스크랩 및 컬렉션 관리
 - **뉴스 공유**: 카카오톡 공유 기능
 
-### 📧 뉴스레터 기능
+### 뉴스레터 기능
 
 - **구독 관리**: 카테고리별 뉴스레터 구독/해지
 - **뉴스레터 미리보기**: 이메일 발송 전 미리보기
 - **개인화 설정**: 관심사 기반 뉴스레터 커스터마이징
 
-### 🤖 AI 기능
+### AI 기능
 
 - **뉴스 요약**: OpenAI 기반 뉴스 요약
 - **툴팁**: 어려운 단어 자동 분석 및 툴팁 제공
 - **관련 뉴스**: AI 기반 관련 뉴스 추천
 
-### 🎨 UI/UX 특징
+### UI/UX 특징
 
 - **반응형 디자인**: 모바일, 태블릿, 데스크톱 대응
 - **다크/라이트 모드**: 테마 전환 기능
 - **접근성**: WCAG 가이드라인 준수
 - **성능 최적화**: 이미지 지연 로딩, 코드 스플리팅
 
-## 🔄 5-3. 상태 관리 구조
+## 5-3. 상태 관리 구조
 
 ### Context API 활용
 
@@ -329,7 +408,7 @@ hooks/
 - **useLoading**: 로딩 상태 관리
 - **usePerformance**: 성능 모니터링
 
-## 🌐 5-4. API 통신 구조
+## 5-4. API 통신 구조
 
 ### API 라우트 (Next.js App Router)
 
@@ -348,7 +427,7 @@ app/api/
 - **newsletterService.js**: 뉴스레터 관련 API 호출
 - **api-utils.js**: 공통 API 유틸리티 함수
 
-## 🔐 5-5. 미들웨어 및 인증 관리
+## 5-5. 미들웨어 및 인증 관리
 
 ### Next.js Middleware
 
