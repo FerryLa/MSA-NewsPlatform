@@ -15,7 +15,7 @@ public class RefreshToken {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  // 사용자와 1:1 관계 매핑
+  // 사용자와 1:1 관계 설정
   @OneToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "user_id", nullable = false)
   private User user;
@@ -23,7 +23,7 @@ public class RefreshToken {
   @Column(nullable = false)
   private String tokenValue;
 
-  // 생성자로 필수 필드 초기화
+  // 생성자
   public RefreshToken(User user, String tokenValue) {
     this.user = user;
     this.tokenValue = tokenValue;

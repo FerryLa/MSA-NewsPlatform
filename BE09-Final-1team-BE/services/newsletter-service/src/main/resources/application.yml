@@ -1,4 +1,3 @@
-# Newsletter Service Application Configuration
 spring:
   application:
     name: newsletter-service

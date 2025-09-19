@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Tag(name = "User History", description = "사용자 뉴스 읽은 기록 관리 API")
-@SecurityRequirement(name = "bearerAuth")  // jwt bearer token 인증 필요
-@RequestMapping("/api/users/mypage/history") // 핵심: 공통 경로로 단순화
+@SecurityRequirement(name = "bearerAuth") // 모든 API에 전역적으로 인증 요구 설정
+@RequestMapping("/api/users/mypage/history")
 @RequiredArgsConstructor
 public class UserHistoryController {
     private final UserHistoryService userHistoryService;
@@ -55,7 +55,7 @@ public class UserHistoryController {
             description = "사용자가 읽은 뉴스 이력을 최신순으로 페이지 조회합니다.",
             operationId = "getReadHistory"
     )
-    @GetMapping("/index")
+    @GetMapping("/index") // ✅ 핵심: 상대 경로로 단순화
     public ResponseEntity<ApiResult<Page<ReadHistoryResponse>>> getReadHistory(
             @Parameter(hidden = true) @AuthenticationPrincipal String userIdStr,
             @ParameterObject

@@ -1,18 +1,19 @@
-"use client";
+// AdminSettings
+'use client';
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
+import { Switch } from '@/components/ui/switch';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Save } from "lucide-react";
+} from '@/components/ui/select';
+import { Save } from 'lucide-react';
 
 export default function AdminSettings() {
   return (
@@ -55,9 +56,7 @@ export default function AdminSettings() {
             <div className="flex items-center justify-between">
               <div className="space-y-0.5">
                 <Label>2단계 인증</Label>
-                <p className="text-sm text-gray-500">
-                  관리자 계정에 2단계 인증 적용
-                </p>
+                <p className="text-sm text-gray-500">관리자 계정에 2단계 인증 적용</p>
               </div>
               <Switch />
             </div>

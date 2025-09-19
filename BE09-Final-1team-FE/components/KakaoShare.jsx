@@ -36,7 +36,7 @@ export default function KakaoShare({
   const [isLoading, setIsLoading] = useState(false);
 
   // 환경변수에서 카카오 JavaScript 키 가져오기
-  const KAKAO_JS_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+  const KAKAO_JS_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY || '58255a3390abb537df22b14097e5265e';
   const TEMPLATE_ID = process.env.NEXT_PUBLIC_KAKAO_TEMPLATE_ID || 123798;
 
   useEffect(() => {
@@ -68,18 +68,32 @@ export default function KakaoShare({
     console.log('카카오 공유 데이터:', data);
     console.log('현재 도메인:', window.location.origin);
     
+    // 뉴스레터 미리보기 URL 생성 (실제 newsletterId 사용)
+    const newsletterPreviewUrl = data.id 
+      ? `${window.location.origin}/newsletter/${data.id}/preview`
+      : window.location.href;
+    
+    console.log('🔗 생성된 뉴스레터 URL:', newsletterPreviewUrl);
+    
     return {
-      // 카카오 개발자 콘솔에서 확인한 실제 변수명 사용
-      '${REGI_WEB_DOMAIN}': window.location.origin,
-      '${IMAGE_URL}': data.imageUrl || 'https://via.placeholder.com/800x400/667eea/ffffff?text=NewSphere',
+      // 카카오 템플릿 변수명 (${} 제거, 변수명만 사용)
+      // 카카오 개발자 콘솔에서 템플릿을 확인하고 정확한 변수명을 사용하세요
+      TITLE: data.title || '뉴스레터',
+      DESCRIPTION: data.description || '흥미로운 뉴스를 확인해보세요',
+      IMAGE_URL: data.imageUrl || 'https://via.placeholder.com/800x400/667eea/ffffff?text=NewSphere',
+      WEB_URL: newsletterPreviewUrl,
+      MOBILE_URL: newsletterPreviewUrl,
+      NEWSLETTER_ID: String(data.id || '1'),
+      DOMAIN: window.location.origin,
+      REGI_WEB_DOMAIN: window.location.origin,
       
-      // 기본 템플릿 변수들 (실제 템플릿에 따라 수정 필요)
-      'title': data.title || '뉴스레터',
-      'description': data.description || '',
-      'webUrl': data.url || window.location.href,
-      'mobileUrl': data.url || window.location.href,
-      'category': data.category || 'Newsletter',
-      'author': data.author || 'NewSphere'
+      // 추가 변수들 (실제 템플릿에 따라 수정 필요)
+      CATEGORY: data.category || 'Newsletter',
+      AUTHOR: data.author || 'NewSphere',
+      CONTENT_TITLE: data.title || '뉴스레터',
+      CONTENT_DESC: data.description || '',
+      LINK_URL: newsletterPreviewUrl,
+      BUTTON_TITLE: '뉴스레터 보기'
     };
   };
 

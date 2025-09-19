@@ -6,19 +6,16 @@ import com.newsletterservice.common.ApiResponse;
 import com.newsletterservice.common.exception.NewsletterException;
 import com.newsletterservice.dto.*;
 import com.newsletterservice.entity.*;
+import com.newsletterservice.repository.UserNewsletterSubscriptionRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import com.google.common.collect.Lists;
 
 import org.springframework.data.domain.*;
-import org.springframework.scheduling.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.*;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
 import java.util.stream.*;
 import java.util.Optional;
 
@@ -29,7 +26,6 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-@Transactional
 public class NewsletterService {
 
     // ========================================
@@ -44,12 +40,32 @@ public class NewsletterService {
     
     private final NewsServiceClient newsServiceClient;
     private final UserServiceClient userServiceClient;
+    private final UserNewsletterSubscriptionRepository subscriptionRepository;
 
     // ========================================
     // 1. 뉴스레터 발송 관리
     // ========================================
 
     // 구독 확인 기능은 user-service에서 처리됩니다.
+    
+    /**
+     * 뉴스레터 구독 생성 (트랜잭션 처리)
+     */
+    @Transactional
+    public UserNewsletterSubscription createSubscription(Long userId, String category, 
+            String frequency, String sendTime, Boolean isPersonalized, String keywords) {
+        UserNewsletterSubscription subscription = UserNewsletterSubscription.builder()
+                .userId(userId)
+                .category(category)
+                .isActive(true)
+                .frequency(frequency)
+                .sendTime(sendTime)
+                .isPersonalized(isPersonalized)
+                .keywords(keywords)
+                .build();
+        
+        return subscriptionRepository.save(subscription);
+    }
 
     // ========================================
     // 2. 콘텐츠 생성 (위임)
@@ -134,8 +150,8 @@ public class NewsletterService {
     public List<NewsResponse> getCategoryArticles(String category, int limit) {
         try {
             String englishCategory = convertCategoryToEnglish(category);
-            ApiResponse<Page<NewsResponse>> response = newsServiceClient.getNewsByCategory(englishCategory, 0, limit);
-            return response != null && response.getData() != null ? response.getData().getContent() : new ArrayList<>();
+            Page<NewsResponse> response = newsServiceClient.getNewsByCategory(englishCategory, 0, limit);
+            return response != null ? response.getContent() : new ArrayList<>();
         } catch (Exception e) {
             log.error("카테고리별 기사 조회 실패: category={}", category, e);
             return new ArrayList<>();
@@ -144,15 +160,20 @@ public class NewsletterService {
 
     public List<String> getTrendingKeywords(int limit) {
         try {
-            ApiResponse<List<TrendingKeywordDto>> response = newsServiceClient.getTrendingKeywords(limit, "24h", 24);
-            if (response != null && response.getData() != null) {
+            ApiResponse<List<TrendingKeywordDto>> response = newsServiceClient.getTrendingKeywordsByCategory("GENERAL", limit, "24h", 24);
+            if (response != null && response.isSuccess() && response.getData() != null && !response.getData().isEmpty()) {
                 return response.getData().stream()
                         .map(TrendingKeywordDto::getKeyword)
+                        .filter(Objects::nonNull)
                         .filter(this::isValidKeywordForNewsletter)
                         .collect(Collectors.toList());
             }
+        } catch (feign.RetryableException e) {
+            log.error("전체 트렌드 키워드 조회 재시도 실패: error={}", e.getMessage());
+            return getFallbackGeneralKeywords(limit);
         } catch (Exception e) {
-            log.warn("전체 트렌드 키워드 조회 실패", e);
+            log.warn("전체 트렌드 키워드 조회 실패: error={}", e.getMessage());
+            return getFallbackGeneralKeywords(limit);
         }
         return new ArrayList<>();
     }
@@ -167,8 +188,12 @@ public class NewsletterService {
                         .filter(this::isValidKeywordForNewsletter)
                         .collect(Collectors.toList());
             }
+        } catch (feign.RetryableException e) {
+            log.error("카테고리별 트렌드 키워드 조회 재시도 실패: category={}, error={}", category, e.getMessage());
+            return getFallbackKeywordsForCategory(category, limit);
         } catch (Exception e) {
-            log.warn("카테고리별 트렌드 키워드 조회 실패: category={}", category, e);
+            log.warn("카테고리별 트렌드 키워드 조회 실패: category={}, error={}", category, e.getMessage());
+            return getFallbackKeywordsForCategory(category, limit);
         }
         return new ArrayList<>();
     }
@@ -599,5 +624,48 @@ public class NewsletterService {
             errorResponse.put("timestamp", System.currentTimeMillis());
             return errorResponse;
         }
+    }
+
+    /**
+     * 카테고리별 트렌드 키워드 조회 실패 시 사용할 fallback 키워드 제공
+     */
+    private List<String> getFallbackKeywordsForCategory(String category, int limit) {
+        log.info("카테고리별 fallback 키워드 사용: category={}, limit={}", category, limit);
+        
+        // 카테고리별 기본 키워드 매핑
+        Map<String, List<String>> fallbackKeywords = Map.of(
+            "ECONOMY", List.of("경제", "금리", "인플레이션", "주식", "부동산", "환율", "고용", "성장"),
+            "POLITICS", List.of("정치", "선거", "국회", "정부", "정책", "여당", "야당", "대통령"),
+            "SOCIETY", List.of("사회", "교육", "복지", "건강", "환경", "안전", "문화", "생활"),
+            "WORLD", List.of("국제", "외교", "무역", "글로벌", "유엔", "G7", "G20", "협정"),
+            "TECHNOLOGY", List.of("기술", "AI", "반도체", "스마트폰", "인터넷", "디지털", "혁신", "스타트업"),
+            "SPORTS", List.of("스포츠", "축구", "야구", "농구", "올림픽", "월드컵", "선수", "경기"),
+            "ENTERTAINMENT", List.of("연예", "영화", "드라마", "음악", "가수", "배우", "예능", "방송")
+        );
+        
+        String englishCategory = convertCategoryToEnglish(category);
+        List<String> keywords = fallbackKeywords.getOrDefault(englishCategory, 
+            List.of("뉴스", "이슈", "화제", "주목", "관심", "핫이슈", "트렌드", "이슈"));
+        
+        return keywords.stream()
+                .limit(limit)
+                .collect(Collectors.toList());
+    }
+
+    /**
+     * 전체 트렌드 키워드 조회 실패 시 사용할 fallback 키워드 제공
+     */
+    private List<String> getFallbackGeneralKeywords(int limit) {
+        log.info("전체 fallback 키워드 사용: limit={}", limit);
+        
+        // 일반적인 인기 키워드들
+        List<String> generalKeywords = List.of(
+            "경제", "정치", "사회", "기술", "스포츠", "연예", "국제", "환경", 
+            "교육", "건강", "부동산", "주식", "AI", "반도체", "디지털", "혁신"
+        );
+        
+        return generalKeywords.stream()
+                .limit(limit)
+                .collect(Collectors.toList());
     }
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { authenticatedFetch } from '@/lib/auth';
+import { authenticatedFetch } from '@/lib/auth/auth';
 
 export default function SubscriberCount({ 
   darkTheme = false, 
@@ -15,7 +15,7 @@ export default function SubscriberCount({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let url = "/api/subscriber-count";
+        let url = "/api/newsletter/stats/subscribers";
         
         if (category) {
           // 특정 카테고리 구독자 수 조회

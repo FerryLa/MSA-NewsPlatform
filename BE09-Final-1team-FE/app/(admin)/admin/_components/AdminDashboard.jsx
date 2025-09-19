@@ -1,13 +1,8 @@
-"use client";
+// AdminDashBoard.jsx
+'use client';
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import {
   Table,
   TableBody,
@@ -15,8 +10,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/table';
+import { Button } from '@/components/ui/button';
 import {
   BarChart,
   Bar,
@@ -28,27 +23,27 @@ import {
   PieChart,
   Pie,
   Cell,
-} from "recharts";
-import { Users, FileText, Mail, Eye, Edit, Trash2 } from "lucide-react";
+} from 'recharts';
+import { Users, FileText, Mail, Eye, Edit, Trash2 } from 'lucide-react';
 
 export default function AdminDashboard() {
   // Sample data
   const statsData = [
-    { name: "월", users: 1200, articles: 45, newsletters: 890 },
-    { name: "화", users: 1350, articles: 52, newsletters: 920 },
-    { name: "수", users: 1100, articles: 38, newsletters: 850 },
-    { name: "목", users: 1450, articles: 61, newsletters: 980 },
-    { name: "금", users: 1600, articles: 55, newsletters: 1100 },
-    { name: "토", users: 1200, articles: 42, newsletters: 890 },
-    { name: "일", users: 1000, articles: 35, newsletters: 750 },
+    { name: '월', users: 1200, articles: 45, newsletters: 890 },
+    { name: '화', users: 1350, articles: 52, newsletters: 920 },
+    { name: '수', users: 1100, articles: 38, newsletters: 850 },
+    { name: '목', users: 1450, articles: 61, newsletters: 980 },
+    { name: '금', users: 1600, articles: 55, newsletters: 1100 },
+    { name: '토', users: 1200, articles: 42, newsletters: 890 },
+    { name: '일', users: 1000, articles: 35, newsletters: 750 },
   ];
 
   const categoryData = [
-    { name: "정치", value: 30, color: "#8884d8" },
-    { name: "경제", value: 25, color: "#82ca9d" },
-    { name: "IT/과학", value: 20, color: "#ffc658" },
-    { name: "사회", value: 15, color: "#ff7300" },
-    { name: "기타", value: 10, color: "#00ff00" },
+    { name: '정치', value: 30, color: '#8884d8' },
+    { name: '경제', value: 25, color: '#82ca9d' },
+    { name: 'IT/과학', value: 20, color: '#ffc658' },
+    { name: '사회', value: 15, color: '#ff7300' },
+    { name: '기타', value: 10, color: '#00ff00' },
   ];
 
   return (
@@ -62,9 +57,7 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">12,345</div>
-            <p className="text-xs text-muted-foreground">
-              +12% from last month
-            </p>
+            <p className="text-xs text-muted-foreground">+12% from last month</p>
           </CardContent>
         </Card>
 
@@ -81,16 +74,12 @@ export default function AdminDashboard() {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              뉴스레터 구독자
-            </CardTitle>
+            <CardTitle className="text-sm font-medium">뉴스레터 구독자</CardTitle>
             <Mail className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">8,901</div>
-            <p className="text-xs text-muted-foreground">
-              +15% from last month
-            </p>
+            <p className="text-xs text-muted-foreground">+15% from last month</p>
           </CardContent>
         </Card>
 
@@ -101,9 +90,7 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">456K</div>
-            <p className="text-xs text-muted-foreground">
-              +22% from last month
-            </p>
+            <p className="text-xs text-muted-foreground">+22% from last month</p>
           </CardContent>
         </Card>
       </div>
@@ -140,9 +127,7 @@ export default function AdminDashboard() {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ name, percent }) =>
-                    `${name} ${(percent * 100).toFixed(0)}%`
-                  }
+                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="value"
