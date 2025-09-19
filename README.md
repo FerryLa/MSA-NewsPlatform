@@ -255,6 +255,8 @@ graph TB
 # 📜 3. 문서
 
 ### 3-1 프로젝트 문서
+- [**`WBS`**](https://drive.google.com/file/d/1KMIRRldpsOt_d2XmYJy9O4sseIVCdpa2/view)
+- [**`ERD`**](https://www.erdcloud.com/d/rJGtPgDQyZvDcfZMv)
 - [**`MSA 아키텍쳐 설계`**](https://www.notion.so/coffit23/MSA-269a02b1ffb180f680aac8018b7ff206)
 
 ### 3-2 데이터 구축 설계
