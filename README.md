@@ -44,7 +44,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 | 메인 홈페이지 | 소셜 로그인 및 마이페이지 |
 |:-------------:|:-------------------------:|
-| ![Image1](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjc4NTcyeXd3ZWwxN3ZxczBqOWhiM3RwanUxMGxjdzUzY3N5cGZ1ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/z0MWtpmcy4dOBjMDcH/giphy.gif) | ![Image](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWpqcHkzdmwzNXF6cXhxZGN5Y2NzZXo5cWdudzhrcWtoM3ZrN3NpeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WJ6ZFum7wMPhSY0RSf/giphy.gif) |
+| ![Image1](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGV6ZGk3dDgxMGE2NnRyYWR0Z25rdzl6cm12MGNrazR3czJ1NHR4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LcpAJc8xPJggEHUTPB/giphy.gif)) | ![Image](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWpqcHkzdmwzNXF6cXhxZGN5Y2NzZXo5cWdudzhrcWtoM3ZrN3NpeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WJ6ZFum7wMPhSY0RSf/giphy.gif) |
 
 | 검색 및 스크랩 | 뉴스레터 |
 |:-------------:|:-------------------------:|
