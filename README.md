@@ -44,7 +44,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 
 | 메인 홈페이지 | 소셜 로그인 및 마이페이지 |
 |:-------------:|:-------------------------:|
-| ![Image1](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGV6ZGk3dDgxMGE2NnRyYWR0Z25rdzl6cm12MGNrazR3czJ1NHR4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LcpAJc8xPJggEHUTPB/giphy.gif)) | ![Image](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWpqcHkzdmwzNXF6cXhxZGN5Y2NzZXo5cWdudzhrcWtoM3ZrN3NpeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WJ6ZFum7wMPhSY0RSf/giphy.gif) |
+| ![Image1](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGV6ZGk3dDgxMGE2NnRyYWR0Z25rdzl6cm12MGNrazR3czJ1NHR4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LcpAJc8xPJggEHUTPB/giphy.gif) | ![Image](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWpqcHkzdmwzNXF6cXhxZGN5Y2NzZXo5cWdudzhrcWtoM3ZrN3NpeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WJ6ZFum7wMPhSY0RSf/giphy.gif) |
 
 | 검색 및 스크랩 | 뉴스레터 |
 |:-------------:|:-------------------------:|
@@ -82,65 +82,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 | 이채희 | **회원/보안/인프라**               | 회원 기능, 보안 및 인프라, Config, Gateway, Discovery, Swagger |
 
 ## 1-8. MSA 식 구조
-
-```mermaid
-graph TB
-    subgraph "Frontend"
-        FE[Next.js Frontend<br/>:3000]
-    end
-
-    subgraph "API Gateway"
-        GW[Gateway Service<br/>:8000]
-    end
-
-    subgraph "Core Services"
-        NS[News Service<br/>:8081]
-        US[User Service<br/>:8082]
-        CR[Crawler Service<br/>:8083]
-        NLS[Newsletter Service<br/>:8084]
-        TS[Tooltip Service<br/>:8085]
-        DS[Dedup Service<br/>:8086]
-        FAS[FlaskAPI<br/>:8087]
-    end
-
-    subgraph "Infrastructure"
-        DSV[Discovery Service<br/>:8761]
-        CFG[Config Service<br/>:8888]
-        DB[(MySQL)]
-        RD[(Redis)]
-        MQ[RabbitMQ]
-    end
-
-    FE --> GW
-    GW --> NS
-    GW --> US
-    GW --> CR
-    GW --> NLS
-    GW --> TS
-    GW --> DS
-    GW --> FAS
-
-    NS --> DSV
-    US --> DSV
-    CR --> DSV
-    NLS --> DSV
-    TS --> DSV
-    DS --> DSV
-    FAS --> DSV
-
-    DSV --> CFG
-
-    NS --> DB
-    US --> DB
-    CR --> DB
-    NLS --> DB
-    TS --> DB
-    DS --> DB
-    FAS --> DB
-
-    US --> RD
-    NLS --> MQ
-```
+<img width="750" height="1200" alt="image" src="https://github.com/user-attachments/assets/73812d93-b12b-4bad-96b4-a82c1c3ebdf6" />
 
 
 | 모듈명                   | 기능 역할                                                          | 담당자 |
