@@ -121,7 +121,7 @@ JWT 기반의 로그인 및 인증을 적용해 실제 서비스와 유사한 �
 - [**`CI/CD 설계서`**](https://www.notion.so/coffit23/CI-CD-269a02b1ffb1805c8faec7ceca3ce7d6)
 
 ### AI
--[**`프로젝트 엔지니어링(엑셀파일)`**](https://docs.google.com/spreadsheets/d/1gX1jFI5sRwIT0cfZ9cawUVt2TKU4hKMwF_6zGXK-HNU/edit?usp=drive_web&ouid=103693303252087372075)
+- [**`프로젝트 엔지니어링(엑셀파일)`**](https://docs.google.com/spreadsheets/d/1gX1jFI5sRwIT0cfZ9cawUVt2TKU4hKMwF_6zGXK-HNU/edit?usp=drive_web&ouid=103693303252087372075)
 
 ---
 
